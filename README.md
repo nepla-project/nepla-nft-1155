@@ -1,1 +1,1 @@
-# nepla-nft-1155
+# nepla-nft-721
