@@ -23,8 +23,10 @@ module.exports = {
       gasPrice: "auto"
     }
   },
-  polygonscan: {
-    apiKey: process.env.POLYGONSCAN_KEY
+  etherscan: {
+    apiKey: {
+      polygon: process.env.POLYGONSCAN_KEY
+    }
   },
   paths: {
     sources: "./contracts",

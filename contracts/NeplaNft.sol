@@ -63,7 +63,7 @@ contract NeplaNft is
     }
 
     function neplaBurn(uint256 tokenId) public virtual onlyOwner {
-        _burn(tokenId);
+        _update(address(0), tokenId, owner());
     }
 
     function mint(
@@ -77,20 +77,21 @@ contract NeplaNft is
     }
 
     // The following functions are overrides required by Solidity.
- 
+    /*
     function _burn(uint256 tokenId)
         internal
-        override(ERC721)
+        override
     {
         super._burn(tokenId);
     }
+    */
 
     function _increaseBalance(address account, uint128 value) internal override(ERC721, ERC721Enumerable) {
         super._increaseBalance(account, value);
     }
 
     function _update(address to, uint256 tokenId, address auth) internal override(ERC721, ERC721Enumerable) returns (address) {
-        super._update(to, tokenId, auth);
+        return super._update(to, tokenId, auth);
     }
 
     function tokenURI(uint256 tokenId)
