@@ -6,7 +6,7 @@ require("dotenv").config();
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  defaultNetwork: "mumbai",
+  defaultNetwork: "amoy",
   networks: {
     polygon: {
       url: process.env.POLYGON_RPC_ENDPOINT,
@@ -15,10 +15,10 @@ module.exports = {
       gas: "auto",
       gasPrice: "auto"
     },
-    mumbai: {
-      url: process.env.MUMBAI_RPC_ENDPOINT,
-      accounts: [process.env.MUMBAI_PRIVATE_KEY],
-      chainId: 80001,
+    amoy: {
+      url: process.env.AMOY_RPC_ENDPOINT,
+      accounts: [process.env.AMOY_PRIVATE_KEY],
+      chainId: 80002,
       gas: "auto",
       gasPrice: "auto"
     }
